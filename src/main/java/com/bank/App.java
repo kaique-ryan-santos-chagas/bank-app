@@ -5,12 +5,18 @@ import java.util.HashMap;
 
 import com.bank.Controllers.FinancialController;
 import com.bank.Controllers.UserController;
+import com.bank.Database.Migrations;
 
 public class App 
 {
 
+
     public static void main( String[] args )
     {
+
+        Migrations migrations = new Migrations();
+
+        migrations.migrate();
 
         Scanner reader = new Scanner(System.in);
         int option;
